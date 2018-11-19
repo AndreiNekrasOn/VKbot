@@ -1,9 +1,8 @@
-import vk_api
 from vk_api.longpoll import VkLongPoll, VkEventType
+import vk_api
 
 login, password = 'login', 'password'
 vk_session = vk_api.VkApi(login, password)
-
 try:
     vk_session.auth(token_only=True)
 except vk_api.AuthError as error_msg:
